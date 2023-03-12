@@ -1,0 +1,43 @@
+{
+	"name" : "isotope_stin",
+	"type" : "contao-bundle",
+	"description" : "Isotope EU STIN (Umsatzsteuer-ID) management for Contao.",
+	"license" : "GPL-3.0+",
+	"homepage" : "https://github.com/toteph42/isotope_stin",
+	"authors" : [
+		{
+			"name" : "Florian Daeumling",
+			"homepage" : "https://github.com/toteph42"
+		}
+	],
+	"keywords" : [
+		"isotope",
+		"VAT",
+		"UstID",
+		"STIN",
+		"MwSt",
+		"Mehrwertsteuer",
+		"EU-Tax",
+		"order"
+	],
+	"require" : {
+		"php" : ">=7.0",
+		"contao/core-bundle" : ">=4.9.0",
+		"isotope/isotope-core" : ">=2.6.9"
+	},
+	"conflict" : {
+		"contao/manager-plugin" : "<2.0 || >=3.0"
+	},
+	"extra" : {
+		"contao-manager-plugin" : "Isotope_STINBundle\\ContaoManager\\Plugin"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Isotope_STINBundle\\" : "src/"
+		}
+	},
+	"support" : {
+		"issues" : "https://github.com/toteph42/isotope_stin/issues",
+		"source" : "https://github.com/toteph42/isotope_stin"
+	}
+}
