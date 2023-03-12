@@ -1,11 +1,10 @@
 {
-	"name" : "isotope_stin",
+	"name" : "toteph42/isotope_stin",
 	"type" : "contao-bundle",
 	"description" : "Isotope EU STIN (Umsatzsteuer-ID) management for Contao.",
 	"license" : "GPL-3.0+",
 	"homepage" : "https://github.com/toteph42/isotope_stin",
-	"authors" : [
-		{
+	"authors" : [{
 			"name" : "Florian Daeumling",
 			"homepage" : "https://github.com/toteph42"
 		}
