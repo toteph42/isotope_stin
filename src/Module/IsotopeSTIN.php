@@ -39,7 +39,7 @@ class IsotopeSTIN extends Frontend {
     		return true;
 
     	// clean vat number string
-		$vat = str_replace([ chr(0), chr(9), chr(10), chr(11), chr(13), chr(173) ], null, $vat);
+		$vat = str_replace([ chr(0), chr(9), chr(10), chr(11), chr(13), chr(173) ], '', $vat);
 
 		// known / validated user?
 		if (FE_USER_LOGGED_IN) {
@@ -166,7 +166,7 @@ class IsotopeSTIN extends Frontend {
 			return true;
 
 		// get STIN
-		$stin = isset($arrAddresses['billing']->eu_stin) ? $arrAddresses['billing']->eu_stin : null;
+		$stin = isset($arrAddresses['billing']->eu_stin) ? $arrAddresses['billing']->eu_stin : '';
 
 		// STIN available?
 		if (!strlen($stin))
@@ -304,7 +304,7 @@ class IsotopeSTIN extends Frontend {
     		return false;
     	}
 
-    	require TL_ROOT.'/vendor/syncgw/contao-isotope_stin/src/Module/IXR_Library.php';
+    	require TL_ROOT.'/vendor/toteph42/isotope_stin/src/Module/IXR_Library.php';
 
     	$client     = new \IXR_Client('https://'.$host);
 		$UstId_1    = strtoupper($own_country.$own_vat_no);
